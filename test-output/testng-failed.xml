@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="webdrivertraining.FirefoxDriverTest">
+      <class name="webdrivertraining.BrowserFactoryTest">
         <methods>
-          <include name="launchFirefox"/>
+          <include name="testCreateDefaultDriver"/>
+          <include name="testCreateChromeDriver"/>
+          <include name="testCreateFirefoxDriver"/>
         </methods>
-      </class> <!-- webdrivertraining.FirefoxDriverTest -->
+      </class> <!-- webdrivertraining.BrowserFactoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

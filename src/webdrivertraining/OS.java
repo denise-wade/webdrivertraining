@@ -1,15 +1,17 @@
 package webdrivertraining;
 
-public class OS
+public enum OS
 {
-	public static String simpleName()
+	WINDOWS, MAC, LINUX, UNKNOWN;
+	
+	public static OS detect()
 	{
-		String os = System.getProperty("os.name");
+		String os = System.getProperty("os.name").toUpperCase();
 		
-		if (os.toLowerCase().contains("mac")) { return "mac"; }
-		if (os.toLowerCase().contains("windows")) { return "windows"; }
-		if (os.toLowerCase().contains("linux")) { return "linux"; }
+		if (os.contains("WINDOWS")) { return WINDOWS; }
+		if (os.contains("MAC")) { return MAC; }
+		if (os.contains("LINUX")) { return LINUX; }
 		
-		return os;
+		return UNKNOWN;
 	}
 }

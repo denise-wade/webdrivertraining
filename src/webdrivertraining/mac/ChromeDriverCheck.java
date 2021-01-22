@@ -9,7 +9,7 @@ public class ChromeDriverCheck
 {
 	public static void main(String[] args)
 	{
-		System.out.println("os: " + OS.simpleName());
+		System.out.println("os: " + OS.detect());
 		
 		System.out.println("Checking ChromeDriver");
 		System.setProperty("webdriver.chrome.driver", "resources/mac/chromedriver");
