@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FindMultipleElements
 {
-
 	public static void main(String[] args)
 	{
 		System.setProperty("webdriver.chrome.driver", "test/resources/chromedriver.exe");
@@ -18,11 +17,13 @@ public class FindMultipleElements
 		driver.get("https://training.one-shore.com/learn_locating_techniques/");
 		
 		List<WebElement> steps = driver.findElements(By.cssSelector("#steps p"));
-		
 		System.out.println(steps.size());
 		
+		for (WebElement element : steps)
+		{
+			System.out.println(element.getText());
+		}
+			
 		driver.quit();		
-
 	}
-
 }
