@@ -11,6 +11,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
+import java.util.concurrent.TimeUnit;
+
 public class AirportLookupTest
 {
 	private WebDriver driver;
@@ -22,6 +24,7 @@ public class AirportLookupTest
 	{
 		driver.get("https://www.faa.gov/");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		js.executeScript("window.scrollTo(0,0)");
 		driver.findElement(By.id("airportCode")).sendKeys("GPI");
 		driver.findElement(By.id("checkAirport")).click();
@@ -30,10 +33,6 @@ public class AirportLookupTest
 		By checkAirport = By.id("checkAirport");
 		WebElement checkAirportButton = driver.findElement(checkAirport);
 		checkAirportButton.click();
-		
-		
-		
-		Thread.sleep(3000);
 		
 		String airportName = driver.findElement(By.cssSelector(".airportInfo b")).getText();	
 		System.out.println("airportName: " + airportName);

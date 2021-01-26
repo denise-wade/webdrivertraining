@@ -1,6 +1,7 @@
 package theinternet;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -18,6 +19,9 @@ public class LoginTest
 		
 		// set window size 
 		driver.manage().window().maximize();
+		
+		Cookie cookie = new Cookie("mycookie", "chocolate chip");
+		driver.manage().addCookie(cookie);
 		
 		// enter user name
 		driver.findElement(By.id("username")).sendKeys("tomsmith");
