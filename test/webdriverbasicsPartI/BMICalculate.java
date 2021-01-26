@@ -165,13 +165,15 @@ public class BMICalculate {
 	@BeforeTest
 	public void beforeTest() {
 		/* Firefox Browser */
-		System.setProperty("webdriver.gecko.driver",
-				"test\\resources\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				"test\\resources\\chromedriver.exe");
 		driver = new FirefoxDriver();
 	}
 
 	@AfterTest
 	public void afterTest() {
+		driver.quit();
 	}
+	
 
 }
