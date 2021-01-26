@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 
@@ -38,8 +39,8 @@ public class WebTableOperationsTest {
   @BeforeTest
   public void beforeTest() {
 	
-		System.setProperty("webdriver.gecko.driver", "test\\resources\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "test\\resources\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.get("http://the-internet.herokuapp.com/tables");
 		driver.manage().window().maximize();
 		/*Creating object of WebTable class by passing WebTable element as an argument

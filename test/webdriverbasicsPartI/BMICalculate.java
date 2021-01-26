@@ -24,7 +24,7 @@ public class BMICalculate {
 	@Test
 	public void testWebElementCommands() {
 		/* Load the URL in browser */
-		driver.get("http://www.calcbmi.com/");
+		driver.get("https://www.calcbmi.com/");
 		driver.manage().window().maximize();
 
 		/*

@@ -97,8 +97,8 @@ public class LoginPageChromeIE {
 		 * driver executables. The below code shows this for each of the browsers
 		 */
 		
-		 System.setProperty("webdriver.gecko.driver",
-		 "test\\resources\\geckodriver.exe"); driver = new FirefoxDriver();
+		 System.setProperty("webdriver.chrome.driver",
+		 "test\\resources\\chromedriver.exe"); driver = new ChromeDriver();
 		 
 		// Chrome Browser
 		/*
@@ -111,7 +111,7 @@ public class LoginPageChromeIE {
 		driver = new InternetExplorerDriver();
 */		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://the-internet.herokuapp.com/login");
+		driver.get("https://the-internet.herokuapp.com/login");
 	}
 
 	@AfterMethod

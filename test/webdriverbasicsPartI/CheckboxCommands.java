@@ -21,7 +21,7 @@ public class CheckboxCommands {
 	@Test
 	public void testCheckbox() {
 		/* Load the URL using get(URL) method */
-		driver.get("http://the-internet.herokuapp.com/checkboxes");
+		driver.get("https://the-internet.herokuapp.com/checkboxes");
 		driver.manage().window().maximize();
 
 		/*

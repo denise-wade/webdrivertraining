@@ -19,7 +19,7 @@ public class HandlingCookies {
 	@Test
 	public void testCookieCommands() {
 
-		driver.get("http://flipkart.com/");
+		driver.get("https://flipkart.com/");
 		driver.manage().window().maximize();
 
 		/*

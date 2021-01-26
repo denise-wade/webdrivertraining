@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 
@@ -20,7 +21,7 @@ public class RadioButtonCommands {
   @Test
   public void testRadioButtons() {
 	  /*Load the URL using get(URL) method */
-	  driver.get("http://www.calcbmi.com/");
+	  driver.get("https://www.calcbmi.com/");
 	  driver.manage().window().maximize();
 	  
 	  /*Using findElement() method we are locating web element on the web page 
@@ -67,8 +68,8 @@ public class RadioButtonCommands {
   @BeforeMethod
   public void beforeTest() {
 	 
-		System.setProperty("webdriver.gecko.driver", "test\\resources\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "test\\resources\\chromedriver.exe");
+		driver = new ChromeDriver();
   }
 
   @AfterMethod
