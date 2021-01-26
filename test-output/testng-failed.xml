@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="webdrivertraining.BrowserFactoryTest">
+      <class name="faa.AirportLookupTest">
         <methods>
-          <include name="testCreateDefaultDriver"/>
-          <include name="testCreateChromeDriver"/>
-          <include name="testCreateFirefoxDriver"/>
+          <include name="airportLookup"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- webdrivertraining.BrowserFactoryTest -->
+      </class> <!-- faa.AirportLookupTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

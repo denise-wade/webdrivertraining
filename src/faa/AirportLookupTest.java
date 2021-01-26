@@ -26,6 +26,13 @@ public class AirportLookupTest
 		driver.findElement(By.id("airportCode")).sendKeys("GPI");
 		driver.findElement(By.id("checkAirport")).click();
 		
+		
+		By checkAirport = By.id("checkAirport");
+		WebElement checkAirportButton = driver.findElement(checkAirport);
+		checkAirportButton.click();
+		
+		
+		
 		Thread.sleep(3000);
 		
 		String airportName = driver.findElement(By.cssSelector(".airportInfo b")).getText();	
