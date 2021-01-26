@@ -1,6 +1,8 @@
-package webdrivertraining;
+package browserdrivertests;
 
 import org.testng.annotations.Test;
+
+import webdrivertraining.OS;
 
 public class OSTest
 {

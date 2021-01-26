@@ -1,7 +1,9 @@
-package webdrivertraining;
+package browserdrivertests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
+
+import webdrivertraining.BrowserFactory;
 
 public class BrowserFactoryTest
 {
