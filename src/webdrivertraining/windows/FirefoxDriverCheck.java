@@ -8,7 +8,7 @@ public class FirefoxDriverCheck
 	public static void main(String[] args)
 	{
 		System.out.println("Checking Firefox driver");		
-		System.setProperty("webdriver.gecko.driver", "resources/windows/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "test/resources/geckodriver.exe");
 
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://one-shore.com");

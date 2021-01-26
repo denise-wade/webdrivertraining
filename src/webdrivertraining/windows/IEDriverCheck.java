@@ -8,7 +8,7 @@ public class IEDriverCheck
 	public static void main(String[] args)
 	{
 		System.out.println("Checking IE Driver");
-		System.setProperty("webdriver.ie.driver", "resources/windows/IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", "test/resources/IEDriverServer.exe");
 
 		WebDriver driver = new InternetExplorerDriver();
 		driver.get("https://one-shore.com");

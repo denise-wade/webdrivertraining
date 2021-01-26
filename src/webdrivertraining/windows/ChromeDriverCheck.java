@@ -12,7 +12,7 @@ public class ChromeDriverCheck
 		System.out.println("os: " + OS.detect());
 
 		System.out.println("Checking ChromeDriver");
-		System.setProperty("webdriver.chrome.driver", "resources/windows/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "test/resources/chromedriver.exe");
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://one-shore.com");

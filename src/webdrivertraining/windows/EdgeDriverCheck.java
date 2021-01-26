@@ -8,7 +8,7 @@ public class EdgeDriverCheck
 	public static void main(String[] args)
 	{
 		System.out.println("Checking Edge Driver");
-		System.setProperty("webdriver.edge.driver", "resources/windows/msedgedriver.exe");
+		System.setProperty("webdriver.edge.driver", "test/resources/msedgedriver.exe");
 
 		WebDriver driver = new EdgeDriver();
 		driver.get("https://one-shore.com");
