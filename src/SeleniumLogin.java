@@ -5,6 +5,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -55,14 +56,30 @@ public class SeleniumLogin
 		passwordField.sendKeys("SuperSecretPassword!");
 
 		// wait a bit so we what happened
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 	    
 		// find the login button and click it
-		WebElement loginButton = driver.findElement(By.className("fa-sign-in"));
+//		WebElement loginButton = driver.findElement(By.className("fa-sign-in"));
+
+		// find login form and then find login button from it
+ 		WebElement loginForm = driver.findElement(By.cssSelector("form[name='login']"));
+ 		WebElement loginButton = loginForm.findElement(By.cssSelector("button[type='submit'"));
+ 		
+ 		// check form fields
+ 		List<WebElement> fields = loginForm.findElements(By.tagName("input"));
+ 		System.out.println(fields.size());
+ 		
+// 		for (int i = 0; i < fields.size(); i++)
+ 		
+ 		for (WebElement field : fields)
+ 		{
+ 			System.out.println(field.getAttribute("value"));
+ 		}
+ 		
 		loginButton.click();
 		
 		// wait a bit so we what happened
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 	    
 		// go back to login page
 		driver.navigate().back();
