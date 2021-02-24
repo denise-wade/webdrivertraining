@@ -29,7 +29,7 @@ public class SeleniumLogin
 		// or start ie 
 //		WebDriver driver = new InternetExplorerDriver();
 		
-		// pr start edge
+		// or start edge
 //		WebDriver driver = new EdgeDriver();
 		
 		// resize to test responsive layout on iphone
@@ -37,7 +37,6 @@ public class SeleniumLogin
 
 	    // set implicit wait to 60 seconds
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		
 		
 		// open URL
 		driver.get("https://the-internet.herokuapp.com/login");
@@ -47,18 +46,20 @@ public class SeleniumLogin
 	    String url = driver.getCurrentUrl();
 	    System.out.println("url: " + url);
 	    
-		
 		// find username field and type the username
-		driver.findElement(By.id("username")).sendKeys("tomsmith");
+		WebElement usernameField = driver.findElement(By.id("username"));
+		usernameField.sendKeys("tomsmith");
 	    
 		// find password field and type the password
-		driver.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+		WebElement passwordField = driver.findElement(By.id("password"));
+		passwordField.sendKeys("SuperSecretPassword!");
 
 		// wait a bit so we what happened
 		Thread.sleep(3000);
 	    
 		// find the login button and click it
-		driver.findElement(By.className("fa-sign-in")).click();
+		WebElement loginButton = driver.findElement(By.className("fa-sign-in"));
+		loginButton.click();
 		
 		// wait a bit so we what happened
 		Thread.sleep(3000);
@@ -69,7 +70,6 @@ public class SeleniumLogin
 		// wait a bit so we what happened
 		Thread.sleep(3000);
 			    
-				
 		/// close browser
 		driver.quit();
 	}
