@@ -21,7 +21,7 @@ public class SeleniumLogin
 		System.setProperty("webdriver.edge.driver", "test\\resources\\msedgedriver.exe");
 		
 		// start chrome browser
-//		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		
 		// or start firefox browser
 //		WebDriver driver = new FirefoxDriver();
@@ -30,7 +30,7 @@ public class SeleniumLogin
 //		WebDriver driver = new InternetExplorerDriver();
 		
 		// pr start edge
-		WebDriver driver = new EdgeDriver();
+//		WebDriver driver = new EdgeDriver();
 		
 		// resize to test responsive layout on iphone
 	    driver.manage().window().setSize(new Dimension(418,896));
