@@ -14,24 +14,24 @@ public class SeleniumLogin
 		WebDriver chrome = new ChromeDriver();
 		
 		// open URL
-	    chrome.get("https://the-internet.herokuapp.com/login");
+		chrome.get("https://the-internet.herokuapp.com/login");
 	    
-	    // find username field and type the username
-	    chrome.findElement(By.id("username")).sendKeys("tomsmith");
+		// find username field and type the username
+		chrome.findElement(By.id("username")).sendKeys("tomsmith");
 	    
-	    // find password field and type the password
-	    chrome.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+		// find password field and type the password
+		chrome.findElement(By.id("password")).sendKeys("SuperSecretPassword!");
 
-	    // wait a bit so we what happened
-	    Thread.sleep(3000);
+		// wait a bit so we what happened
+		Thread.sleep(3000);
 	    
-	    // find the login button and click it
-	    chrome.findElement(By.className("fa-sign-in")).click();
+		// find the login button and click it
+		chrome.findElement(By.className("fa-sign-in")).click();
 		
-	    // wait a bit so we what happened
-	    Thread.sleep(3000);
+		// wait a bit so we what happened
+		Thread.sleep(3000);
 	    
-	    // close browser
+		/// close browser
 		chrome.quit();
 	}
 }
