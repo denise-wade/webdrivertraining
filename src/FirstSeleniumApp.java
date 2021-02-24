@@ -8,7 +8,7 @@ public class FirstSeleniumApp
 		System.out.println("We've started chrome");
 		
 		// telling java where to find chromedriver.exe so it can start it up
-		System.setProperty("webdriver.chrome.driver", "resources/windows/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "test\\resources\\chromedriver.exe");
 		
 		WebDriver chrome = new ChromeDriver();
 	}
