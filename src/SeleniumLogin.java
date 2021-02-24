@@ -15,17 +15,23 @@ public class SeleniumLogin
 		System.setProperty("webdriver.ie.driver", "test\\resources\\IEDriverServer.exe");
 		
 		// start chrome browser
-//		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		
 		// or start firefox browser
 //		WebDriver driver = new FirefoxDriver();
 		
 		// or start ie 
-		WebDriver driver = new InternetExplorerDriver();
+//		WebDriver driver = new InternetExplorerDriver();
 		
 		// open URL
 		driver.get("https://the-internet.herokuapp.com/login");
+	    String title = driver.getTitle();
+	    System.out.println("title: " + title);
 	    
+	    String url = driver.getCurrentUrl();
+	    System.out.println("url: " + url);
+	    
+		
 		// find username field and type the username
 		driver.findElement(By.id("username")).sendKeys("tomsmith");
 	    
