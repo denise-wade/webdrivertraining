@@ -11,5 +11,8 @@ public class FirstSeleniumApp
 		System.setProperty("webdriver.chrome.driver", "test\\resources\\chromedriver.exe");
 		
 		WebDriver chrome = new ChromeDriver();
+		
+		
+		chrome.quit();
 	}
 }
