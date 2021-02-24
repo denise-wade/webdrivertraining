@@ -30,7 +30,7 @@ In order for TestNG to run in Eclipse, you also have to add the TestNG plugin fo
 	
 ### Browser drivers for mac (under resources/mac):
 
-	- ChromeDriver 87.0.4280.88
+	- ChromeDriver 88.0.4324.96 
 	
 ### Selenium Server (under resources):
 
