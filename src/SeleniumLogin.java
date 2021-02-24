@@ -15,6 +15,9 @@ public class SeleniumLogin
 		// start chrome browser
 		WebDriver driver = new ChromeDriver();
 		
+		// or start firefox browser
+//		WebDriver driver = new FirefoxDriver();
+		
 		// open URL
 		driver.get("https://the-internet.herokuapp.com/login");
 	    
