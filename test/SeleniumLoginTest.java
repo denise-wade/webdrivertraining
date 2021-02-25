@@ -8,11 +8,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class SeleniumLoginTest
 {
 	WebDriver driver;
+	String usernameParameter;
+	String passwordParameter;
 	
 	@BeforeClass
 	public void configureDrivers()
@@ -23,6 +27,14 @@ public class SeleniumLoginTest
 		System.setProperty("webdriver.gecko.driver", "test\\resources\\geckodriver.exe");
 		System.setProperty("webdriver.ie.driver", "test\\resources\\IEDriverServer.exe");
 		System.setProperty("webdriver.edge.driver", "test\\resources\\msedgedriver.exe");	
+	}
+	
+	@Parameters({"username", "password"})
+	@BeforeTest
+	public void getParameters(String username, String password)
+	{
+		this.usernameParameter = username;
+		this.passwordParameter = password;
 	}
 	
 	@BeforeMethod
@@ -68,8 +80,8 @@ public class SeleniumLoginTest
 		System.out.println("This should login successfully");
 		
 		/* Arrange */
-		String username = "tomsmith";
-		String password = "SuperSecretPassword!";
+		String username = usernameParameter;
+		String password = passwordParameter;
 		
 		/* Act */
 		String message = login(username, password);
@@ -85,8 +97,8 @@ public class SeleniumLoginTest
 		System.out.println("This should fail to login");
 	
 		/* Arrange */
-		String username = "tomsmith";
-		String password = "SuperDuperWrongPassword!!!";
+		String username = usernameParameter;
+		String password = passwordParameter;
 		
 		/* Act */
 		String message = login(username, password);
